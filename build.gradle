@@ -32,6 +32,17 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+            exclude '**/Test.java'
+            exclude '**/LinePrinter.java'
+            exclude '**/Classifier.java'
+            exclude '**/BigDelight.java'
+       }
+   }
+}
 
 // Use gradle execute -PmainClassName=xxx to specify the main class
 task execute(type:JavaExec) {
